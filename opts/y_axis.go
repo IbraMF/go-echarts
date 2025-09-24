@@ -13,7 +13,7 @@ type YAxis struct {
 	//'left' (default)
 	//'right'
 	Position string `json:"position,omitempty"`
-
+	
 	// Location of axis name.
 	//
 	// Options:
@@ -104,4 +104,7 @@ type YAxis struct {
 
 	// Settings related to axis pointer.
 	AxisPointer *AxisPointer `json:"axisPointer,omitempty"`
+
+	// CUSTOM FORK: Offset for the y axis to avoid overlapping
+	Offset int `json:"offset,omitempty`
 }
