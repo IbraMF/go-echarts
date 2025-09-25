@@ -111,6 +111,15 @@ type XAxis struct {
 
 	// Settings related to axis pointer.
 	AxisPointer *AxisPointer `json:"axisPointer,omitempty"`
+
+	// CUSTOM FORK: Offset for the x axis
+	Offset int `json:"offset,omitempty"`
+
+	// CUSTOM FORK: MinorTick pointer
+	MinorTick *MinorTick `json:"minorTick,omitempty"`
+
+	// CUSTOM FORK: NameTextStyle pointer
+	NameTextStyle *NameTextStyle `json:"nameTextStyle,omitempty"`
 }
 
 // AxisLabel settings related to axis label .
@@ -280,4 +289,26 @@ type AxisLine struct {
 	SymbolOffset []float64 `json:"symbolOffset,omitempty"`
 
 	LineStyle *LineStyle `json:"lineStyle,omitempty"`
+}
+
+// CUSTOM FORK: Minorticks
+// URL HERE
+type MinorTick struct {
+
+	// CUSTOM FORK: Show minortik
+	Show types.Bool `json:"show,omitempty"`
+
+	// CUSTOM FORK: Splitnumber of minorticks
+	SplitNumber int `json:"splitNumber,omitempty"`
+}
+
+// CUSTOM FORK: nametextstyle
+// URL HERE
+type NameTextStyle struct {
+
+	// CUSTOM FORK: Show minortik
+	FontSize int `json:"fontSize,omitempty"`
+
+	// CUSTOM FORK: Splitnumber of minorticks
+	Padding []int `json:"padding,omitempty"`
 }
